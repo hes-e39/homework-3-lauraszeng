@@ -26,13 +26,13 @@ const ColorDiv = () => {
         const comparable_colors = i.comp.map(i => {
             const comp_css_color: string = `#${i.hex}`;
             return (
-                <li key={i.name} style={{ color: comp_css_color }}>
-                    Hex: {i.hex}{' '}
+                <li key={i.name} style={{ color: comp_css_color, border: '5px solid', borderColor: comp_css_color, padding: '10px', margin: '5px' }}>
+                    Hex: {i.hex} ({i.name})
                 </li>
             );
         });
         return (
-            <div style={{ color: css_color }} key={i.hex}>
+            <div style={{ color: css_color, border: '5px solid', borderColor: css_color, padding: '10px', margin: '10px' }} key={i.hex}>
                 Hex: {i.hex} <br />
                 Name: {i.name} <br />
                 Comparable Colors: {comparable_colors} <br />
